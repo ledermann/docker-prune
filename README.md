@@ -17,7 +17,7 @@ This image was created to cleanup docker swarm clusters regulary.
 
 ## Usage
 
-Take a look at the example [docker-stack.yml](https://github.com/liske/docker-prune/blob/master/docker-stack.yml) file to regulary cleanup all swarm nodes.
+Take a look at the example [docker-stack.yml](https://github.com/ledermann/docker-prune/blob/master/docker-stack.yml) file to regulary cleanup all swarm nodes.
 
 The cleanup interval can be supplied by setting the `SLEEP` environment variable to the number of seconds between runs. If the `SLEEP` environment variable is empty a one-shot cleanup is done. Alternatively the [restart_policy configuration option](https://docs.docker.com/compose/compose-file/#restart_policy) in the compose file can be used to restart *docker-prune* regulary.
 
@@ -29,7 +29,7 @@ The object types to be pruned can be passed as parameter (using `docker run`) or
 
 To give it a one-shot try to remove unused images, only:
 ```
-$ docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock liske/docker-prune image
+$ docker run -it --rm -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/ledermann/docker-prune image
 >>> docker image prune <<<
 Deleted Images:
 deleted: sha256:115c7fd768e29aeaa7b73c49038e3ef90c9a4442148cc70551044783a5c3b77b

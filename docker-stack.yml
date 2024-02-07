@@ -2,7 +2,7 @@ version: '3'
 
 services:
   prune:
-    image: "liske/docker-prune"
+    image: ghcr.io/ledermann/docker-prune
 
     environment:
       # prune every 2h
